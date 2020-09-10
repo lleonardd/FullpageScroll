@@ -5,7 +5,7 @@
 
 ##### The `FullscreenScroll` Framework is a simple and efficiant way to change the scrollbehaviour of your HTML page.
 
-### Checkout the [Demo](https://micro-scripts.github.io/MCS-customScroll/) it includes all Documentation
+### Checkout the [Demo](https://micro-scripts.github.io/FullpageScroll) it includes all Documentation as well
 
 ----------
 
