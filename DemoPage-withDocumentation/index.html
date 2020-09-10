@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullscreenScroll</title>
+    <link rel="stylesheet" href="./FullscreenScrollComp.css">
+    <link rel="stylesheet" href="./demoPageStylesComp.css">
+</head>
+<body>
+    <img src="./icon.svg" alt="icon" class="demoIcon posFixed">
+    <a href="https://www.instagram.com/microscripts/" target="_blank" class="instaLink posFixed">Instagram ↗</a>
+    
+    <div class="fullscroll-textNav posFixed"></div>
+    <div class="fullscroll-progress posFixed" data-progresstype="bar"></div>
+    
+    <div class="fullscroll" data-dotNav="true" data-scrollspeed="10">
+        <div class="screen bg1 bgImg" data-anchorname="Home">
+            <div class="center">
+                <h1 class="title">Fullscreen&shy;Scroll.js</h1>
+            </div>
+        </div>
+        <div class="screen bg2" data-anchorname="How it works">
+            <div class="center sideBySide">
+                <div class="left">
+                    <h1>How it works</h1>
+                    <p>Simply link the Sources and than add the HTML Skeletton. Now just fill out the screen and thats it.</p>
+                    <hr width="30%" align="left">
+                    <p>You can adjust the scrollspeed to your liking with the <strong>data-scrollspeed=" "</strong> tag on the .fullscroll element.</p>
+                    <p>If the data tag isn't set, it defaults to 10.</p>
+                </div>
+                <div class="right">
+                    <h2>Sources</h2>
+                    <div>
+<pre class="codeBlock"><span class="bl">&lt;link</span> <span class="gn">rel=</span><span class="yl">"stylesheet"</span><span class="gn"> href=</span><span class="yl">"./FullscreenScrollComp.css"</span><span class="bl">></span>
+<span class="bl">&lt;script</span><span class="gn"> src=</span><span class="yl">"./FullscreenScroll.js"</span><span class="bl">>&lt/script></span></pre></div>
+
+                    <h2>Skeletton</h2>
+                    <div>
+<pre class="codeBlock"><span class="bl">&lt;div </span><span class="gn">class=</span><span class="yl">&quot;fullscroll&quot;</span> <span class="gn">data-scrollspeed=</span><span class="yl">&quot;10&quot;</span><span class="bl">&gt;</span>
+    <span class="bl">&lt;div</span> <span class="gn">class=</span><span class="yl">&quot;screen&quot;</span> <span class="gn">data-anchorname=</span><span class="yl">&quot;Home&quot;</span><span class="bl">&gt;&lt;/div&gt;</span>
+    <span class="bl">&lt;div</span> <span class="gn">class=</span><span class="yl">&quot;screen&quot;</span> <span class="gn">data-anchorname=</span><span class="yl">&quot;About&quot;</span><span class="bl">&gt;&lt;/div&gt;</span>
+    <span class="bl">&lt;div</span> <span class="gn">class=</span><span class="yl">&quot;screen&quot;</span> <span class="gn">data-anchorname=</span><span class="yl">&quot;Story&quot;</span><span class="bl">&gt;&lt;/div&gt;</span>
+    <span class="bl">&lt;div</span> <span class="gn">class=</span><span class="yl">&quot;screen&quot;</span> <span class="gn">data-anchorname=</span><span class="yl">&quot;Contact&quot;</span><span class="bl">&gt;&lt;/div&gt;</span>
+<span class="bl">&lt;/div&gt;</span></pre></div>
+                </div>
+            </div>
+        </div>
+        <div class="screen bg3 bgImg" data-anchorname="Progress indicator">
+            <div class="center sideBySide">
+                <div class="left">
+                    <h1>Progress indicator</h1>
+                    <p>Add the progress indicator - code & add the <strong>data-progresstype=" "</strong> to choose what style of progress indicator you want. It defaults to the number progress indicator.</p>
+                    <p>You can place the progress indicator code wherever you want. In that way you can just show it on selected screens.</p>
+                    <hr width="30%" align="left">
+                    <h3 style="margin: 30px 0px 10px 0px;">Options</h3>
+                    <table class="tableStyle">
+                        <tr>
+                            <th>Indicator Style</th>
+                            <th>data-progresstype=" "</th>
+                        </tr>
+                        <tr>
+                            <td>1 / 4</td>
+                            <td>number</td>
+                        </tr>
+                        <tr>
+                            <td><div class="fullscroll-bar-outer" style="height: 10px;"><div class="fullscroll-bar-inner" style="width: 66.6667%;"></div></div></td>
+                            <td>bar</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="right y-center-p">
+                    <div class="y-center-c">
+                        <h3>Progress indicator - Code</h3>
+                        <pre class="codeBlock"><span class="bl">&lt;div</span><span class="gn"> class=</span><span class="yl">"fullscroll-progress"</span><span class="gn"> data-progresstype=</span><span class="yl">"bar"</span><span class="bl">>&lt;/div></span></pre>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="screen bg4" data-anchorname="Nav Options">
+            <div class="center">
+                <h1>Navigation Options</h1>
+                <p>
+                    For the navigation you have two options. 
+                </p>
+
+                <div class="sideBySide">
+                    <div class="left">
+                        <p>
+                            Firstly you have the Dot-Navigation which is simply activated by adding the <strong>data-dotNav="true"</strong> tag to the .fullscroll element.
+                        </p>
+                    </div>
+                    <div class="right">
+                        <p>
+                            Secondly we have the text navigation.<br>
+                            In order to use it you just have to add the <strong>.fullscroll-textnav</strong> class into your navigation like shown below. In this element the links to your screens will automatically be placed.
+                        </p>
+                        <pre class="codeBlock"><span class="bl">&lt;div</span><span class="gn"> class=</span><span class="yl">"fullscroll-textNav"</span><span class="bl">>&lt;/div></span></pre>
+                        
+                    </div>
+                </div>
+
+                <p>
+                    Both types of navigation will update their current active - indicator to your current screen.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./FullscreenScroll.js"></script>
+</body>
+</html> 
